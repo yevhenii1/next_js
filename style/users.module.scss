@@ -1,0 +1,45 @@
+.users {
+  background-color: rgb(167, 110, 70);
+  padding: 20px 10px;
+  text-transform: uppercase;
+
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    max-width: 992px;
+    width: 100%;
+    margin: 0 auto;
+
+    li {
+      margin-bottom: 10px;
+      margin-right: 10px;
+
+      a {
+
+        border: 1px solid #000;
+        border-radius: 10px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+
+        &:hover {
+          color: #042d95;
+        }
+
+        img {
+          max-width: 160px;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

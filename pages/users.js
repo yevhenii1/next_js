@@ -2,17 +2,28 @@ import React from 'react';
 import Link from 'next/link';
 
 import MainContainer from '../components/MainContainer';
+import styles from '../style/users.module.scss';
 
 const Users = ({ users }) => {
   return (
     <MainContainer>
-      <h1>Upers page</h1>
-      <div>
-        {users.map((user) => (
-          <li key={user.id}>
-            <Link href={`/users/${user.id}`}>{user.name}</Link>
-          </li>
-        ))}
+      <div className={styles.users}>
+        <h1>Upers page</h1>
+        <ul>
+          {users.map((user) => (
+            <li key={user.id}>
+              <Link href={`/users/${user.id}`}>
+                <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="" />
+                <div>
+                  <b>{user.name}</b>
+                  <p>{user.email}</p>
+                  <p>{user.phone}</p>
+                  <p>{user.website}</p>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </MainContainer>
   );

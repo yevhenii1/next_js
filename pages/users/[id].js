@@ -1,13 +1,25 @@
 import { useRouter } from 'next/router';
 
 import MainContainer from '../../components/MainContainer';
+import styles from '../../style/user.module.scss';
 
 const User = ({ user }) => {
   const { query } = useRouter();
+
+  console.log('users', user.address);
+
   return (
     <MainContainer keywords={user.name}>
-      <h4>user id = {query.id}</h4>
-      <b>name - {user.name}</b>
+      <div className={styles.user}>
+        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="" />
+        <div>
+          <b>{user.name}</b>
+          <p>{user.email}</p>
+          <p>{user.phone}</p>
+          <p>{user.website}</p>
+          {/* <p>{user.website.address}</p> */}
+        </div>
+      </div>
     </MainContainer>
   );
 };

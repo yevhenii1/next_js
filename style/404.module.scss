@@ -1,0 +1,17 @@
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px;
+
+  b {
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  p {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
